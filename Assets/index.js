@@ -3,12 +3,6 @@ let clickedOrder = [];
 let lock = true;
 let gameState = document.getElementById("state");
 
-
-// 0 verde
-// 1 vermelho
-// 2 amarelo
-// 3 azul
-
 const green = document.querySelector('.green');
 const red = document.querySelector('.red');
 const yellow = document.querySelector('.yellow');
@@ -106,8 +100,8 @@ let lose = () => {
     lock = true;
     order = [];
     clickedOrder = [];
-    gameState.innerHTML=("GameOver");
-    setTimeout(()=>{StartGame();},2000);
+    gameState.innerHTML=("Game Over");
+    setTimeout(()=>{StartGame();},1500);
     
 }
 

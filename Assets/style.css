@@ -1,6 +1,14 @@
 body{
     margin: 0;
     background-color: rgb(208, 255, 239);
+    
+}
+
+.text{
+    height: 20%;
+    width: 100%; 
+    margin: 5px;
+    margin-bottom: 15px;
 }
 
 .title{
@@ -18,8 +26,8 @@ body{
 
 
 .main-game{
-    height: 75vh;
-    width: 100vw; 
+    height: 75%;
+    width: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;   
