@@ -3,6 +3,7 @@ let clickedOrder = [];
 let lock = true;
 let gameState = document.getElementById("state");
 
+
 const green = document.querySelector('.green');
 const red = document.querySelector('.red');
 const yellow = document.querySelector('.yellow');
@@ -100,15 +101,9 @@ let lose = () => {
     order = [];
     clickedOrder = [];
     gameState.innerHTML=("GAME OVER");
-    createColorElement(0).classList.remove('off');
-    createColorElement(1).classList.remove('off');
-    createColorElement(2).classList.remove('off');
-    createColorElement(3).classList.remove('off');
+  
     setTimeout(()=>{
-        createColorElement(0).classList.add('off');
-        createColorElement(1).classList.add('off');
-        createColorElement(2).classList.add('off');
-        createColorElement(3).classList.add('off');
+      
         StartGame();
     },1500);
     
