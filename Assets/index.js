@@ -11,7 +11,6 @@ const blue = document.querySelector('.blue');
 //Start
 let StartGame = () => {
     nextlevel();
- 
 }
 
 //CreateColor
@@ -44,7 +43,7 @@ let lightColor = (element, i) => {
         {
             setTimeout(() => {
                 lock = false;
-                gameState.innerHTML=("Insira a Ordem");
+                gameState.innerHTML=("INSIRA A ORDEM");
             }, 200)
         }
             
@@ -87,7 +86,7 @@ let checkOrder = () => {
 //Win
 let nextlevel = () => {  
     let val = order.length+1
-    gameState.innerHTML=("Nível "+ val)
+    gameState.innerHTML=("NÍVEL "+ val)
     clickedOrder = [];
     setTimeout(() => {
         newColor();
@@ -100,8 +99,18 @@ let lose = () => {
     lock = true;
     order = [];
     clickedOrder = [];
-    gameState.innerHTML=("Game Over");
-    setTimeout(()=>{StartGame();},1500);
+    gameState.innerHTML=("GAME OVER");
+    createColorElement(0).classList.remove('off');
+    createColorElement(1).classList.remove('off');
+    createColorElement(2).classList.remove('off');
+    createColorElement(3).classList.remove('off');
+    setTimeout(()=>{
+        createColorElement(0).classList.add('off');
+        createColorElement(1).classList.add('off');
+        createColorElement(2).classList.add('off');
+        createColorElement(3).classList.add('off');
+        StartGame();
+    },1500);
     
 }
 
